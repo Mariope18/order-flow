@@ -1,0 +1,63 @@
+# ==========================================
+# Stark Tower Framework - Safe .gitignore
+# ==========================================
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Secrets, Environment & Local Keys (CRITICAL)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.jks
+secrets.*
+
+# IDE / Editor Settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Build Outputs & Package Caches
+# Java / Spring Boot
+target/
+*.class
+*.jar
+*.war
+
+# Node.js / React / Next.js
+node_modules/
+.next/
+dist/
+build/
+.turbo/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Flutter / Dart
+.dart_tool/
+.packages
+build/
+ios/Flutter/Generated.framework/
+android/.gradle/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Temporary Scratch & Logs
+*.log
+.system_generated/
+tmp/
+temp/
