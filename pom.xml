@@ -15,7 +15,6 @@
     <description>Enterprise Event-Driven Distributed Microservices Platform</description>
 
     <!-- 2. Proprietà Globali -->
-    <!-- 2. Proprietà Globali -->
     <properties>
         <java.version>21</java.version>
         <maven.compiler.source>21</maven.compiler.source>
@@ -36,6 +35,13 @@
                 <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <!-- Modulo interno condiviso (centralizzato per tutti i microservizi) -->
+            <dependency>
+                <groupId>com.orderflow</groupId>
+                <artifactId>orderflow-common</artifactId>
+                <version>${project.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
@@ -73,9 +79,12 @@
         </pluginManagement>
     </build>
 
-    <!-- 4. Moduli (per ora vuoto, aggiungeremo orderflow-common) -->
+    <!-- 5. Moduli del Progetto Distribuito -->
     <modules>
         <module>orderflow-common</module>
+        <module>order-service</module>
+        <module>inventory-service</module>
+        <module>payment-service</module>
     </modules>
 
 </project>
